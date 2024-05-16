@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkedIn Redirect</title>
+</head>
+<body>
+  <script>
+    // Capture le code d'autorisation et l'affiche
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    if (code) {
+      document.body.innerHTML = `<h1>Authorization Code</h1><p>${code}</p>`;
+    } else {
+      document.body.innerHTML = '<h1>Error: No authorization code found</h1>';
+    }
+  </script>
+</body>
+</html>
