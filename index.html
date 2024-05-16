@@ -4,6 +4,11 @@
   <title>LinkedIn Redirect</title>
 </head>
 <body>
+  <h1>Sign in with LinkedIn</h1>
+  <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=77hsx8pwsv0y6i&redirect_uri=https%3A%2F%2Fvictooooor56.github.io%2Flinkedin-redirect&scope=r_liteprofile%20r_emailaddress%20w_member_social&state=random_state">
+    <img src="https://static.licdn.com/scds/common/u/images/apps/signin-with-linkedin-btn.png" alt="Sign in with LinkedIn" style="width:200px;">
+  </a>
+
   <script>
     // Capture le code d'autorisation dans l'URL
     const params = new URLSearchParams(window.location.search);
@@ -11,9 +16,8 @@
     if (code) {
       document.body.innerHTML = `<h1>Authorization Code</h1><p>${code}</p>`;
     } else {
-      document.body.innerHTML = '<h1>Error: No authorization code found</h1>';
+      document.body.innerHTML += '<h1>Error: No authorization code found</h1>';
     }
   </script>
 </body>
 </html>
-
